@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ body {background-image: url("") }
+
+#myChart {
+    max-width: 100%;
+    height: auto;
+    display: block;
+
+}
+
+#canvasWrapper {
+    position: relative;
+    width: 80%; /* Adjust this value according to your layout */
+    margin: auto; /* Centers the container */
+}
+
+#btnWrapper {
+    position: relative;
+    width: 80%;
+
+    margin: 20px 0px 50px 20%;
+}
+
+#overallBtn {
+    margin-right: 5%;
+    padding: 10px 20px 10px 20px;
+
+}
+
+#swedenBtn {
+    margin-right: 5%;
+    padding: 10px 20px 10px 20px;
+}
+
+#japanBtn {
+    margin-right: 5%;
+    padding: 10px 20px 10px 20px;
+}
+
+#usaBtn {
+    margin-right: 5%;
+    padding: 10px 20px 10px 20px;
+}
+
+#usaBtn {
+    margin-right: 5%;
+    padding: 10px 20px 10px 20px;
+}
+
+#ukBtn {
+        margin-right: 5%;
+        padding: 10px 20px 10px 20px;
+}
