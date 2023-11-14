@@ -13,8 +13,11 @@ let overAllData = {
 /// Tegner grafen
 let ctx = document.getElementById('dataChart').getContext('2d');
 
+/// definition af første graf
 let dataChart = new Chart(ctx, {
     type: 'bar',
+
+    /// Benytter options fra 1-10
     data: overAllData,
     options: {
     }
