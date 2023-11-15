@@ -64,22 +64,22 @@
 
 }
 
-#swedenBtn {
+#denmarkBtn {
     margin-right: 5%;
     padding: 10px 20px 10px 20px;
 }
 
-#japanBtn {
-    margin-right: 5%;
-    padding: 10px 20px 10px 20px;
-}
-
-#usaBtn {
+#canadaBtn {
     margin-right: 5%;
     padding: 10px 20px 10px 20px;
 }
 
 #usaBtn {
+    margin-right: 5%;
+    padding: 10px 20px 10px 20px;
+}
+
+#topSellingBtn {
     margin-right: 5%;
     padding: 10px 20px 10px 20px;
 }

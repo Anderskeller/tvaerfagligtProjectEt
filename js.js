@@ -1,9 +1,21 @@
-// Extract labels and data from the array
+// Extract labels and data from the array and create new a array
 let labels = data.map(item => item.GenreName);
 let revenueData = data.map(item => item.TotalRevenue);
 
 let labels2 = data2.map(item => item.GenreName2);
 let revenueData2 = data2.map(item => item.TotalRevenue2);
+
+let labels3 = data3.map(item => item.GenreName3);
+let revenueData3 = data3.map(item => item.TotalRevenue3);
+
+let labels4 = data4.map(item => item.GenreName4);
+let revenueData4 = data4.map(item => item.TotalRevenue4);
+
+let labels5 = data5.map(item => item.GenreName5);
+let revenueData5 = data5.map(item => item.TotalRevenue5);
+
+let labels6 = data6.map(item => item.Country);
+let revenueData6 = data6.map(item => item.TotalSales);
 
 /// Definerer det oprindelige dataset til grafen, inklusive labels og data.
 let ctx = document.getElementById('dataChart').getContext('2d');
@@ -15,22 +27,11 @@ let overAllData = {
     datasets: [{
         label: 'Dataset 1',
         data: revenueData,
-        backgroundColor: 'rgba(255, 99, 132, 0.2)',
-        borderColor: 'rgba(255, 99, 132, 1)',
+        backgroundColor: 'rgba(255,102,86,0.89)',
+        borderColor: 'rgb(255,102,86)',
         borderWidth: 1
     }],
 
-};
-// Opsætning af usaDataGraf
-let usaData = {
-    labels: labels2,
-    datasets2: [{
-        label: 'Dataset 2',
-        data: revenueData2,
-        backgroundColor: 'rgba(255, 99, 132, 1)',
-        borderColor: 'rgba(255, 99, 132, 1)',
-        borderWidth: 1
-    }],
 };
 
 let myBarChart = new Chart(ctx, {
@@ -52,8 +53,6 @@ let myBarChart = new Chart(ctx, {
     }
 
 });
-
-
 
 // Listener for browser dimensions
 window.addEventListener('resize', function() {
@@ -85,6 +84,22 @@ function updateChartData(dataKey) {
             myBarChart.data.labels = labels2;
             myBarChart.data.datasets[0].data = revenueData2;
             break;
+        case 'denmark':
+            myBarChart.data.labels = labels3;
+            myBarChart.data.datasets[0].data = revenueData3;
+            break;
+        case 'canada':
+            myBarChart.data.labels = labels4;
+            myBarChart.data.datasets[0].data = revenueData4;
+            break;
+        case 'United Kingdom':
+            myBarChart.data.labels = labels5;
+            myBarChart.data.datasets[0].data = revenueData5;
+            break;
+        case 'Top Selling Countries':
+            myBarChart.data.labels = labels6;
+            myBarChart.data.datasets[0].data = revenueData6;
+            break;
         default:
             console.error('Invalid data key');
             return;
@@ -102,18 +117,18 @@ document.getElementById('usaBtn').addEventListener('click', function() {
     updateChartData('usa');
 });
 
-document.getElementById('swedenBtn').addEventListener('click', function() {
-    updateChartData('sweden');
+document.getElementById('denmarkBtn').addEventListener('click', function() {
+    updateChartData('denmark');
 });
 
-document.getElementById('japanBtn').addEventListener('click', function() {
-    updateChartData('japan');
+document.getElementById('canadaBtn').addEventListener('click', function() {
+    updateChartData('canada');
 });
 
 document.getElementById('ukBtn').addEventListener('click', function() {
-    updateChartData('uk');
+    updateChartData('United Kingdom');
 });
 
-
-console.log(revenueData)
-console.log(revenueData2)
+document.getElementById('topSellingBtn').addEventListener('click', function() {
+    updateChartData('Top Selling Countries');
+});
