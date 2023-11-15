@@ -4,21 +4,27 @@
     <meta charset="UTF-8">
     <title>Chart.js Example</title>
     <link rel="stylesheet" href="style.css">
-    <script  src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-<h1> Klasse projekt </h1>
-<div id="btnWrapper">
-    <button id="overallBtn"> Overall</button>
-    <button id="usaBtn">USA</button>
-    <button id="swedenBtn">Sweden</button>
-    <button id="japanBtn">Japan</button>
-    <button id="ukBtn">United Kingdom</button>
+
+<div id="main-content">
+    <img src="./img/background.jpg" alt="Your Image" id="background-img">
+    <div id="btnWrapper" style="">
+        <button id="overallBtn">Overall</button>
+        <button id="usaBtn">USA</button>
+        <button id="swedenBtn">Sweden</button>
+        <button id="japanBtn">Japan</button>
+        <button id="ukBtn">United Kingdom</button>
+    </div>
+
+    <div id="canvasWrapper">
+        <canvas id="dataChart"></canvas>
+    </div>
 </div>
 
-<div id="canvasWrapper">
-    <canvas id="dataChart"></canvas>
-</div>
+
+
 
 <script src="js.js"></script>
 </body>
