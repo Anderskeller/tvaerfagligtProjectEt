@@ -1,22 +1,50 @@
+// Extract labels and data from the array
+let labels = data.map(item => item.GenreName);
+let revenueData = data.map(item => item.TotalRevenue);
+
+let labels2 = data.map(item => item.GenreName2);
+let revenueData2 = data.map(item => item.TotalRevenue2);
+
+
+// overall data for button 1
 let overAllData = {
-    labels: ['Rock', 'Pop', 'Rap', 'Country', 'Soul R&B'],
+    labels: labels,
     datasets: [{
-        label: 'Overall ',
-        data: [10, 20, 15, 25, 30],
+        label: labels,
+        data: revenueData,
+        type: 'bar',
         backgroundColor: 'rgba(255, 99, 132, 0.2)',
         borderColor: 'rgba(255, 99, 132, 1)',
         borderWidth: 1
     }]
 };
 
+let usaData = {
+    labels: labels2,
+    datasets2: [{
+        label: labels2,
+        data: revenueData2,
+        type: 'bar',
+        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+        borderColor: 'rgba(255, 99, 132, 1)',
+        borderWidth: 1
+    }]
+};
 
 /// Tegner grafen
 let ctx = document.getElementById('dataChart').getContext('2d');
 
 let dataChart = new Chart(ctx, {
-    type: 'bar',
     data: overAllData,
     options: {
+        scales: {
+            y: {
+                ticks: {
+                    suggestedMin: 100,
+                    beginAtZero: false
+                }
+            }
+        }
     }
 });
 
@@ -50,7 +78,7 @@ document.getElementById('overallBtn').addEventListener('click', function() {
 });
 
 document.getElementById('usaBtn').addEventListener('click', function() {
-    updateChartData('USA', [15, 25, 20, 30, 35]);
+    updateChartData('USA', [labels2]);
 });
 
 document.getElementById('swedenBtn').addEventListener('click', function() {
