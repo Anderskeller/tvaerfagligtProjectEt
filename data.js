@@ -1,101 +1,27 @@
 let dataJson = `[
-\t{
-\t\t"Country":"USA",
-\t\t"TotalRevenue":523.06
-\t},
-\t{
-\t\t"Country":"Canada",
-\t\t"TotalRevenue":303.96
-\t},
-\t{
-\t\t"Country":"France",
-\t\t"TotalRevenue":195.10
-\t},
-\t{
-\t\t"Country":"Brazil",
-\t\t"TotalRevenue":190.10
-\t},
-\t{
-\t\t"Country":"Germany",
-\t\t"TotalRevenue":156.48
-\t},
-\t{
-\t\t"Country":"United Kingdom",
-\t\t"TotalRevenue":112.86
-\t},
-\t{
-\t\t"Country":"Czech Republic",
-\t\t"TotalRevenue":90.24
-\t},
-\t{
-\t\t"Country":"Portugal",
-\t\t"TotalRevenue":77.24
-\t},
-\t{
-\t\t"Country":"India",
-\t\t"TotalRevenue":75.26
-\t},
-\t{
-\t\t"Country":"Chile",
-\t\t"TotalRevenue":46.62
-\t},
-\t{
-\t\t"Country":"Hungary",
-\t\t"TotalRevenue":45.62
-\t},
-\t{
-\t\t"Country":"Ireland",
-\t\t"TotalRevenue":45.62
-\t},
-\t{
-\t\t"Country":"Austria",
-\t\t"TotalRevenue":42.62
-\t},
-\t{
-\t\t"Country":"Finland",
-\t\t"TotalRevenue":41.62
-\t},
-\t{
-\t\t"Country":"Netherlands",
-\t\t"TotalRevenue":40.62
-\t},
-\t{
-\t\t"Country":"Norway",
-\t\t"TotalRevenue":39.62
-\t},
-\t{
-\t\t"Country":"Sweden",
-\t\t"TotalRevenue":38.62
-\t},
-\t{
-\t\t"Country":"Belgium",
-\t\t"TotalRevenue":37.62
-\t},
-\t{
-\t\t"Country":"Denmark",
-\t\t"TotalRevenue":37.62
-\t},
-\t{
-\t\t"Country":"Italy",
-\t\t"TotalRevenue":37.62
-\t},
-\t{
-\t\t"Country":"Poland",
-\t\t"TotalRevenue":37.62
-\t},
-\t{
-\t\t"Country":"Spain",
-\t\t"TotalRevenue":37.62
-\t},
-\t{
-\t\t"Country":"Australia",
-\t\t"TotalRevenue":37.62
-\t},
-\t{
-\t\t"Country":"Argentina",
-\t\t"TotalRevenue":37.62
-\t}
+   {
+      "GenreName":"Rock",
+      "TotalRevenue":826.65
+   },
+   {
+      "GenreName":"Latin",
+      "TotalRevenue":382.14
+   },
+   {
+      "GenreName":"Metal",
+      "TotalRevenue":261.36
+   },
+   {
+      "GenreName":"Alternative & Punk",
+      "TotalRevenue":241.56
+   },
+   {
+      "GenreName":"TV Shows",
+      "TotalRevenue":93.53
+   },
+   {
+      "GenreName":"Jazz",
+      "TotalRevenue":79.20
+   }
 ]`
 let data = JSON.parse(dataJson)
-
-console.log(data)
