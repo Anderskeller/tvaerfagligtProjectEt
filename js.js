@@ -73,5 +73,6 @@ function updateChartData(country, newData) {
     myBarChart.data.datasets[0].label = country;
     myBarChart.data.datasets[0].data = newData;
     myBarChart.update();
+
 }
 
