@@ -1,19 +1,20 @@
-let countryData = {
-    'Overall':[124,111,67,21,52],
-    'USA':[122,1141,222,11,5],
-    'Sweden':[122,1141,222,11,5],
-    'Japan':[122,1141,222,11,5],
-    'United Kingdom':[122,1141,222,11,5]
+// Extract labels and data from the array
+let labels = data.map(item => item.GenreName);
+let revenueData = data.map(item => item.TotalRevenue);
 
-}
+let labels2 = data.map(item => item.GenreName2);
+let revenueData2 = data.map(item => item.TotalRevenue2);
+
+/// Definerer det oprindelige dataset til grafen, inklusive labels og data.
+let ctx = document.getElementById('dataChart').getContext('2d');
 
 
 // Opsætning af første graf
 let overAllData = {
-    labels: ['Rock', 'Pop', 'Rap', 'Country', 'Soul R&B'],
+    labels: labels,
     datasets: [{
-        label: 'Overall',
-        data: countryData,
+        label: labels,
+        data: revenueData,
         type: 'bar',
         backgroundColor: 'rgba(255, 99, 132, 1)',
         borderWidth: 1,
@@ -36,10 +37,18 @@ let overAllData = {
 
     }]
 };
-
-
-/// Definerer det oprindelige dataset til grafen, inklusive labels og data.
-let ctx = document.getElementById('dataChart').getContext('2d');
+// Opsætning af usaDataGraf
+let usaData = {
+    labels: labels2,
+    datasets2: [{
+        label: labels2,
+        data: revenueData2,
+        type: 'bar',
+        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+        borderColor: 'rgba(255, 99, 132, 1)',
+        borderWidth: 1
+    }]
+};
 
 let myBarChart = new Chart(ctx, {
     data: overAllData,
