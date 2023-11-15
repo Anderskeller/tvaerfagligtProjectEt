@@ -2,8 +2,8 @@
 let labels = data.map(item => item.GenreName);
 let revenueData = data.map(item => item.TotalRevenue);
 
-let labels2 = data.map(item => item.GenreName2);
-let revenueData2 = data.map(item => item.TotalRevenue2);
+let labels2 = data2.map(item => item.GenreName2);
+let revenueData2 = data2.map(item => item.TotalRevenue2);
 
 /// Definerer det oprindelige dataset til grafen, inklusive labels og data.
 let ctx = document.getElementById('dataChart').getContext('2d');
@@ -13,63 +13,46 @@ let ctx = document.getElementById('dataChart').getContext('2d');
 let overAllData = {
     labels: labels,
     datasets: [{
-        label: labels,
+        label: 'Dataset 1',
         data: revenueData,
-        type: 'bar',
-        backgroundColor: 'rgba(255, 99, 132, 1)',
-        borderWidth: 1,
-        options: {
-            scales: {
-                xAxes: [{
-                    gridLines: {
-                        display:false
-                    }
-                }],
-                yAxes: [{
-                    gridLines: {
-                        display:false
-                    }
-                }]
-            }
-        }
+        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+        borderColor: 'rgba(255, 99, 132, 1)',
+        borderWidth: 1
+    }],
 
-
-
-    }]
 };
 // Opsætning af usaDataGraf
 let usaData = {
     labels: labels2,
     datasets2: [{
-        label: labels2,
+        label: 'Dataset 2',
         data: revenueData2,
-        type: 'bar',
-        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+        backgroundColor: 'rgba(255, 99, 132, 1)',
         borderColor: 'rgba(255, 99, 132, 1)',
         borderWidth: 1
-    }]
+    }],
 };
 
 let myBarChart = new Chart(ctx, {
+    type: 'bar',
     data: overAllData,
-    options:{
-        plugins:{
-            legend:{
-                labels:{
-                    font:{
+    options: {
+        plugins: {
+            legend: {
+                labels: {
+                    font: {
                         family: "Open Sans",
-                        style: "sans-serif",
                         size: "16px",
                         spacing: "2",
-                        textDecoration:"none",
-                        transform: "uppercase",
+
                     }
                 }
             }
         }
-    },
+    }
 
 });
+
 
 
 // Listener for browser dimensions
@@ -93,38 +76,44 @@ function resizeChart() {
 
 
 /// Update når man trykker på knapperne
-function updateChartData(TotalRevenue) {
-    let newData = revenueData[TotalRevenue];
-
-    if (newData) {
-    myBarChart.data.datasets[0].label = country;
-    myBarChart.data.datasets[0].data = newData;
-    myBarChart.update();
+function updateChartData(dataKey) {
+    switch (dataKey) {
+        case 'overall':
+            myBarChart.data.datasets[0].data = revenueData;
+            break;
+        case 'usa':
+            myBarChart.data.labels = labels2;
+            myBarChart.data.datasets[0].data = revenueData2;
+            break;
+        default:
+            console.error('Invalid data key');
+            return;
     }
-    else{ alert("error")}
+    myBarChart.update();
 }
+
 
 /// interactive buttons
 document.getElementById('overallBtn').addEventListener('click', function() {
-    updateChartData('Rock');
+    updateChartData('overall');
 });
 
 document.getElementById('usaBtn').addEventListener('click', function() {
-    updateChartData('USA');
+    updateChartData('usa');
 });
 
 document.getElementById('swedenBtn').addEventListener('click', function() {
-    updateChartData('Sweden');
+    updateChartData('sweden');
 });
 
 document.getElementById('japanBtn').addEventListener('click', function() {
-    updateChartData('Japan');
+    updateChartData('japan');
 });
 
 document.getElementById('ukBtn').addEventListener('click', function() {
-    updateChartData('United Kingdom');
+    updateChartData('uk');
 });
 
 
-
-
+console.log(revenueData)
+console.log(revenueData2)
