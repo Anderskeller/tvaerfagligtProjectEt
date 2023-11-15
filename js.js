@@ -93,8 +93,8 @@ function resizeChart() {
 
 
 /// Update når man trykker på knapperne
-function updateChartData(country) {
-    let newData = countryData[country];
+function updateChartData(TotalRevenue) {
+    let newData = revenueData[TotalRevenue];
 
     if (newData) {
     myBarChart.data.datasets[0].label = country;
@@ -106,7 +106,7 @@ function updateChartData(country) {
 
 /// interactive buttons
 document.getElementById('overallBtn').addEventListener('click', function() {
-    updateChartData('Overall');
+    updateChartData('Rock');
 });
 
 document.getElementById('usaBtn').addEventListener('click', function() {
