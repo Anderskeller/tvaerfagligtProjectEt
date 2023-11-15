@@ -17,7 +17,7 @@ let ctx = document.getElementById('dataChart').getContext('2d');
 let dataChart = new Chart(ctx, {
     type: 'bar',
 
-    /// Benytter functionens data
+    /// Benytter functionens dataw
     data: overAllData,
     options: {
     }
