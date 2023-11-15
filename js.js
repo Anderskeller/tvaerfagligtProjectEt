@@ -1,15 +1,36 @@
+let countryData = {
+    'Overall':[124,111,67,21,52],
+    'USA':[122,1141,222,11,5],
+    'Sweden':[122,1141,222,11,5],
+    'Japan':[122,1141,222,11,5],
+    'United Kingdom':[122,1141,222,11,5]
+
+}
 
 
 // Opsætning af første graf
 let overAllData = {
     labels: ['Rock', 'Pop', 'Rap', 'Country', 'Soul R&B'],
-
     datasets: [{
-        label: 'Overall ',
-        data: [50, 23, 10, 55, 22],
+        label: 'Overall',
+        data: countryData,
         type: 'bar',
         backgroundColor: 'rgba(255, 99, 132, 1)',
         borderWidth: 1,
+        options: {
+            scales: {
+                xAxes: [{
+                    gridLines: {
+                        display:false
+                    }
+                }],
+                yAxes: [{
+                    gridLines: {
+                        display:false
+                    }
+                }]
+            }
+        }
 
 
 
@@ -37,18 +58,7 @@ let myBarChart = new Chart(ctx, {
                 }
             }
         }
-    },scales: {
-        xAxes: [{
-            gridLines: {
-                display:false
-            }
-        }],
-        yAxes: [{
-            gridLines: {
-                display:false
-            }
-        }]
-    }
+    },
 
 });
 
@@ -74,32 +84,36 @@ function resizeChart() {
 
 
 /// Update når man trykker på knapperne
-function updateChartData(country, newData) {
+function updateChartData(country) {
+    let newData = countryData[country];
+
+    if (newData) {
     myBarChart.data.datasets[0].label = country;
     myBarChart.data.datasets[0].data = newData;
     myBarChart.update();
-
+    }
+    else{ alert("error")}
 }
 
 /// interactive buttons
 document.getElementById('overallBtn').addEventListener('click', function() {
-    updateChartData('Overall', [50, 23, 10, 55, 22]);
+    updateChartData('Overall');
 });
 
 document.getElementById('usaBtn').addEventListener('click', function() {
-    updateChartData('USA', [15, 25, 20, 30, 35]);
+    updateChartData('USA');
 });
 
 document.getElementById('swedenBtn').addEventListener('click', function() {
-    updateChartData('Sweden', [20, 30, 25, 35, 40]);
+    updateChartData('Sweden');
 });
 
 document.getElementById('japanBtn').addEventListener('click', function() {
-    updateChartData('Japan', [25, 35, 30, 40, 45]);
+    updateChartData('Japan');
 });
 
 document.getElementById('ukBtn').addEventListener('click', function() {
-    updateChartData('United Kingdom', [18, 28, 23, 33, 38]);
+    updateChartData('United Kingdom');
 });
 
 
