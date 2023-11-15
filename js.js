@@ -11,13 +11,13 @@ let overAllData = {
 
 
 /// Definerer det oprindelige dataset til grafen, inklusive labels og data.
-let ctx = document.getElementById('dataChart').getContext('2d');
+let ctx = document.getElementById('myBarChart').getContext('2d');
 
 /// definition af første graf
-let dataChart = new Chart(ctx, {
+let myBarChart = new Chart(ctx, {
     type: 'bar',
 
-    /// Benytter functionens dataw
+    /// Benytter data
     data: overAllData,
     options: {
     }
@@ -30,7 +30,7 @@ window.addEventListener('resize', function() {
 
 // Function updatere canvas
 function resizeChart() {
-    let canvas = document.getElementById('dataChart');
+    let canvas = document.getElementById('myBarChart');
     let canvasWrapper = document.getElementById('canvasWrapper');
 
     // sætter canvas til at tilpasse wrapper
@@ -38,8 +38,8 @@ function resizeChart() {
     canvas.height = canvasWrapper.clientHeight;
 
     // resize
-    dataChart.resize();
-    dataChart.update();
+    myBarChart.resize();
+    myBarChart.update();
 }
 
 resizeChart();
@@ -70,8 +70,8 @@ document.getElementById('ukBtn').addEventListener('click', function() {
 
 /// Update når man trykker på knapperne
 function updateChartData(country, newData) {
-    dataChart.data.datasets[0].label = country;
-    dataChart.data.datasets[0].data = newData;
-    dataChart.update();
+    myBarChart.data.datasets[0].label = country;
+    myBarChart.data.datasets[0].data = newData;
+    myBarChart.update();
 }
 
