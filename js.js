@@ -72,4 +72,3 @@ function updateChartData(country, newData) {
     dataChart.data.datasets[0].data = newData;
     dataChart.update();
 }
-
