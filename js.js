@@ -17,18 +17,19 @@ let revenueData5 = data5.map(item => item.TotalRevenue5);
 let labels6 = data6.map(item => item.Country);
 let revenueData6 = data6.map(item => item.TotalSales);
 
-/// Definerer det oprindelige dataset til grafen, inklusive labels og data.
-let ctx = document.getElementById('dataChart').getContext('2d');
-
 let labelsAlbum = dataAlbumOA.map(item => item.AlbumTitle);
 let revenueDataAlbum = dataAlbumOA.map(item => item.TotalRevenueAlbum);
 
-let ctx2 = document.getElementById('dataChart2').getContext('2d');
+/// Victor
+let ctx = document.getElementById('dataChart').getContext('2d');
 
+/// Kasper
+let ctx2 = document.getElementById('dataChart2').getContext('2d');
+/// Anders
 let ctx3 = document.getElementById('dataChart3').getContext('2d');
 
 
-// Opsætning af første graf
+// Opsætning af første graf /// Victor
 let overAllData = {
     labels: labels,
     datasets: [{
@@ -45,12 +46,12 @@ let overAllData = {
     }],
 };
 
-// Opsætning af anden graf
+// Opsætning af anden graf /// Kasper
 let overAllData2 = {
     labels: labels,
     datasets: [{
         label: 'Total revenue',
-        data: revenueData,
+        data: revenueDataAlbum,
         backgroundColor: [
             '#232D3F',
             '#3C485D',
@@ -62,7 +63,7 @@ let overAllData2 = {
     }],
 };
 
-// Opsætning af første graf
+// Opsætning af tredje graf /// Anders
 let overAllData3 = {
     labels: labels,
     datasets: [{
@@ -79,6 +80,7 @@ let overAllData3 = {
     }],
 };
 
+/// Victor
 let myBarChart = new Chart(ctx, {
     type: 'bar',
     data: overAllData,
@@ -109,6 +111,7 @@ let myBarChart = new Chart(ctx, {
     }
 
 });
+/// Kasper
 let myBarChart2 = new Chart(ctx2, {
     type: 'bar',
     data: overAllData2,
@@ -139,7 +142,7 @@ let myBarChart2 = new Chart(ctx2, {
     }
 
 });
-
+/// Anders
 let myBarChart3 = new Chart(ctx3, {
     type: 'bar',
     data: overAllData3,
@@ -171,62 +174,85 @@ let myBarChart3 = new Chart(ctx3, {
 
 });
 
-// Listener for browser dimensions
+// Listener for browser dimensions /// Victor
 window.addEventListener('resize', function() {
     resizeChart();
 });
 
-// Function updatere canvas
+// Function updatere canvas /// Victor
 function resizeChart() {
+    /// Victor
     let canvas = document.getElementById('dataChart');
     let canvasWrapper = document.getElementById('canvasWrapper');
-
+    /// Kasper
     let canvas2 = document.getElementById('dataChart2');
     let canvasWrapper2 = document.getElementById('canvasWrapper2');
+    /// Anders
+    let canvas3 = document.getElementById('dataChart2');
+    let canvasWrapper3 = document.getElementById('canvasWrapper2');
 
     // sætter canvas til at tilpasse wrapper
+    /// Victor
     canvas.width = canvasWrapper.clientWidth;
     canvas.height = canvasWrapper.clientHeight;
-
+    /// Kasper
     canvas2.width = canvasWrapper2.clientWidth;
     canvas2.height = canvasWrapper2.clientHeight;
+    /// Anders
+    canvas3.width = canvasWrapper3.clientWidth;
+    canvas3.height = canvasWrapper3.clientHeight;
+
     // resize
+    /// Victor
     myBarChart.resize();
     myBarChart.update();
+    /// Kasper
     myBarChart2.resize();
     myBarChart2.update();
+    /// Anders
     myBarChart3.resize();
     myBarChart3.update();
 }
 
 
 /// Update når man trykker på knapperne
-/// TO DO - Indsæt data til de 2 nye charts
+
+
+/// Victor
 function updateChartData(dataKey) {
     switch (dataKey) {
         case 'overall':
+            /// Anders
             myBarChart.data.datasets[0].data = revenueData;
-            myBarChart2.data.labels = labelsAlbum;
+            /// Kasper
             myBarChart2.data.datasets[0].data = revenueDataAlbum;
             break;
         case 'usa':
+            /// Anders
             myBarChart.data.labels = labels2;
             myBarChart.data.datasets[0].data = revenueData2;
-
+            /// Kasper
             break;
         case 'denmark':
+            /// Anders
             myBarChart.data.labels = labels3;
             myBarChart.data.datasets[0].data = revenueData3;
+            /// Kasper
             break;
         case 'canada':
+            /// Anders
             myBarChart.data.labels = labels4;
             myBarChart.data.datasets[0].data = revenueData4;
+            /// Kasper
             break;
         case 'United Kingdom':
+            /// Anders
             myBarChart.data.labels = labels5;
             myBarChart.data.datasets[0].data = revenueData5;
+            /// Kasper
             break;
         case 'Top Selling Countries':
+            /// Anders
             myBarChart.data.labels = labels6;
             myBarChart.data.datasets[0].data = revenueData6;
             break;
@@ -234,12 +260,16 @@ function updateChartData(dataKey) {
             console.error('Invalid data key');
             return;
     }
+    /// Victor
     myBarChart.update();
+    /// Kasper
     myBarChart2.update();
+    /// Anders
+    myBarChart3.update();
 }
 
 
-/// interactive buttons
+/// interactive buttons /// Victor & Anders
 document.getElementById('overallBtn').addEventListener('click', function() {
     updateChartData('overall');
 });
