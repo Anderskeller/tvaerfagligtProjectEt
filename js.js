@@ -227,6 +227,7 @@ function updateChartData(dataKey) {
             myBarChart.data.labels = labels;
             /// Kasper
             myBarChart2.data.datasets[0].data = revenueDataAlbum;
+            myBarChart2.data.labels = l
             break;
         case 'usa':
             /// Anders
