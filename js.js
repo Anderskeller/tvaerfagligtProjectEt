@@ -19,6 +19,7 @@ let revenueData6 = data6.map(item => item.TotalSales);
 
 /// Definerer det oprindelige dataset til grafen, inklusive labels og data.
 let ctx = document.getElementById('dataChart').getContext('2d');
+let ctx2 = document.getElementById('dataChart2').getContext('2d');
 
 
 
@@ -35,7 +36,50 @@ let overAllData = {
 
 };
 
+// Opsætning af første graf
+let overAllData2 = {
+    labels: labels,
+    datasets: [{
+        label: 'Dataset 1',
+        data: revenueData,
+        backgroundColor: 'rgba(255,102,86,0.89)',
+        borderColor: 'rgb(255,102,86)',
+        borderWidth: 1
+    }],
+
+};
+
 let myBarChart = new Chart(ctx, {
+    type: 'bar',
+    data: overAllData,
+    options: {scales: {
+            x: {
+                grid: {
+                    display: false // Hide x-axis gridlines
+                }
+            },
+            y: {
+                grid: {
+                    display: false // Hide y-axis gridlines
+                }
+            }
+        },
+        plugins: {
+            legend: {
+                labels: {
+                    font: {
+                        family: "Open Sans",
+                        size: "16px",
+                        spacing: "2",
+
+                    }
+                }
+            }
+        }
+    }
+
+});
+let myBarChart2 = new Chart(ctx2, {
     type: 'bar',
     data: overAllData,
     options: {
@@ -54,7 +98,6 @@ let myBarChart = new Chart(ctx, {
     }
 
 });
-
 // Listener for browser dimensions
 window.addEventListener('resize', function() {
     resizeChart();
@@ -65,13 +108,20 @@ function resizeChart() {
     let canvas = document.getElementById('dataChart');
     let canvasWrapper = document.getElementById('canvasWrapper');
 
+    let canvas2 = document.getElementById('dataChart2');
+    let canvasWrapper2 = document.getElementById('canvasWrapper2');
+
     // sætter canvas til at tilpasse wrapper
     canvas.width = canvasWrapper.clientWidth;
     canvas.height = canvasWrapper.clientHeight;
 
+    canvas2.width = canvasWrapper2.clientWidth;
+    canvas2.height = canvasWrapper2.clientHeight;
     // resize
     myBarChart.resize();
     myBarChart.update();
+    myBarChart2.resize();
+    myBarChart2.update();
 }
 
 
