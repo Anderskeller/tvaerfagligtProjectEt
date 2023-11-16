@@ -27,13 +27,17 @@ let ctx2 = document.getElementById('dataChart2').getContext('2d');
 let overAllData = {
     labels: labels,
     datasets: [{
-        label: 'Dataset 1',
+        label: 'Total revenue',
         data: revenueData,
-        backgroundColor: 'rgba(255,102,86,0.89)',
-        borderColor: 'rgb(255,102,86)',
-        borderWidth: 1
+        backgroundColor: [
+            '#232D3F',
+            '#3C485D',
+            '#546573',
+            '#6D7F8C',
+            '#859AA5',
+            '#9CAFBF',
+        ],
     }],
-
 };
 
 // Opsætning af første graf
