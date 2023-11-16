@@ -148,12 +148,15 @@ let dataJson6 = `[
 \t},
 \t{
 \t\t"Country" : "Germany",
-\t\t"TotalSales" : 152
+\t\t"TotalSales" : 152  
 \t},
 \t{
 \t\t"Country" : "United Kingdom",
 \t\t"TotalSales" : 114
 \t}]`
+
+
+
 
 let data6 = JSON.parse(dataJson6)
 
