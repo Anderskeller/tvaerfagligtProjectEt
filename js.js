@@ -79,6 +79,7 @@ let overAllData2 = {
             '#859AA5',
             '#9CAFBF',
         ],
+
     }],
 };
 
@@ -103,7 +104,8 @@ let overAllData3 = {
 let myBarChart = new Chart(ctx, {
     type: 'bar',
     data: overAllData,
-    options: {scales: {
+    options: {
+        scales: {
             x: {
                 grid: {
                     display: false // Hide x-axis gridlines
@@ -244,9 +246,12 @@ function updateChartData(dataKey) {
             /// Anders
             myBarChart.data.datasets[0].data = revenueData;
             myBarChart.data.labels = labels;
+            myBarChart3.data.datasets[0].data = revenueDataAlbum;
+            myBarChart3.data.labels = labels;
             /// Kasper
             myBarChart2.data.labels = labelsAlbum;
             myBarChart2.data.datasets[0].data = revenueDataAlbum;
+            myBarChart2.data.labels = labels;
             break;
         case 'usa':
             /// Anders
