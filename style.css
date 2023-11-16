@@ -7,7 +7,7 @@
 
 #background-img {
     position: fixed;
-    z-index: 0;
+    z-index: -1;
     height:100%;
     width: 100%;
 }
@@ -16,7 +16,6 @@
     position: sticky;
     top: 0;
     background-color: #355367; /* Background color for the sticky nav */
-    z-index: 1000;
 }
 
 
@@ -28,7 +27,7 @@
     background-color: rgba(12, 99, 71, 0.0);
     position: sticky;
     top: 0;
-    z-index: 100000000;
+    z-index: 8888;
 }
 
 
@@ -60,13 +59,20 @@
 
 /* Position canvas wrapper */
 #canvasWrapper {
-    z-index: 3;
     width: 60%;
     padding: 5% 5%;
     background-color: white;
     margin-left: 15%;
     position: relative;
-    margin-top: 0px;
+    margin-bottom: 200px;
+}
+
+#canvasWrapper2 {
+    width: 60%;
+    padding: 5% 5%;
+    background-color: white;
+    margin-left: 15%;
+    position: relative;
 }
 
 #totalRevenue {
@@ -83,11 +89,3 @@
     padding: 10px 20px 10px 20px;
 
 }
-
-
-
-                                                       /* CSS */
-
-
-
-
