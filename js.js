@@ -25,6 +25,7 @@ let revenueDataAlbum = dataAlbumOA.map(item => item.TotalRevenueAlbum);
 
 let ctx2 = document.getElementById('dataChart2').getContext('2d');
 
+let ctx3 = document.getElementById('dataChart3').getContext('2d');
 
 
 // Opsætning af første graf
@@ -48,7 +49,7 @@ let overAllData = {
 let overAllData2 = {
     labels: labels,
     datasets: [{
-        label: 'Dataset 1',
+        label: 'Total revenue',
         data: revenueData,
         backgroundColor: [
             '#232D3F',
@@ -58,9 +59,24 @@ let overAllData2 = {
             '#859AA5',
             '#9CAFBF',
         ],
-        borderWidth: 1
     }],
+};
 
+// Opsætning af første graf
+let overAllData3 = {
+    labels: labels,
+    datasets: [{
+        label: 'Total revenue',
+        data: revenueData,
+        backgroundColor: [
+            '#232D3F',
+            '#3C485D',
+            '#546573',
+            '#6D7F8C',
+            '#859AA5',
+            '#9CAFBF',
+        ],
+    }],
 };
 
 let myBarChart = new Chart(ctx, {
@@ -123,6 +139,38 @@ let myBarChart2 = new Chart(ctx2, {
     }
 
 });
+
+let myBarChart3 = new Chart(ctx3, {
+    type: 'heatmap',
+    data: overAllData3,
+    options: {scales: {
+            x: {
+                grid: {
+                    display: false // Hide x-axis gridlines
+                }
+            },
+            y: {
+                grid: {
+                    display: false // Hide y-axis gridlines
+                }
+            }
+        },
+        plugins: {
+            legend: {
+                labels: {
+                    font: {
+                        family: "Open Sans",
+                        size: "16px",
+                        spacing: "2",
+
+                    }
+                }
+            }
+        }
+    }
+
+});
+
 // Listener for browser dimensions
 window.addEventListener('resize', function() {
     resizeChart();
@@ -147,6 +195,8 @@ function resizeChart() {
     myBarChart.update();
     myBarChart2.resize();
     myBarChart2.update();
+    myBarChart3.resize();
+    myBarChart3.update();
 }
 
 
