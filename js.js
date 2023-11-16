@@ -20,6 +20,10 @@ let revenueData6 = data6.map(item => item.TotalSales);
 let labelsAlbum = dataAlbumOA.map(item => item.AlbumTitle);
 let revenueDataAlbum = dataAlbumOA.map(item => item.TotalRevenueAlbum);
 
+// let labelsAlbum
+let labelsAlbumUSA = dataAlbumUSA.map(item => item.AlbumTitleUSA)
+let revenueDataAlbumUSA = dataAlbumUSA.map(item => item.TotalRevenueAlbumUSA);
+
 /// Victor
 let ctx = document.getElementById('dataChart').getContext('2d');
 
@@ -226,14 +230,16 @@ function updateChartData(dataKey) {
             myBarChart.data.datasets[0].data = revenueData;
             myBarChart.data.labels = labels;
             /// Kasper
+            myBarChart2.data.labels = labelsAlbum;
             myBarChart2.data.datasets[0].data = revenueDataAlbum;
-            myBarChart2.data.labels = l
             break;
         case 'usa':
             /// Anders
             myBarChart.data.labels = labels2;
             myBarChart.data.datasets[0].data = revenueData2;
             /// Kasper
+            myBarChart2.data.labels = labelsAlbumUSA;
+            myBarChart2.data.datasets[0].data = revenueDataAlbumUSA;
             break;
         case 'denmark':
             /// Anders

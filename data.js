@@ -197,23 +197,23 @@ let dataAlbumOA = JSON.parse(dataJsonAlbumOA)
 let dataJsonAlbumUSA = `[
     {
         "AlbumTitleUSA" : "The Office, Season 3",
-        "TotalRevenueUSA" : 27.86
+        "TotalRevenueAlbumUSA" : 27.86
     },
     {
         "AlbumTitleUSA" : "Unplugged",
-        "TotalRevenueUSA" : 10.89
+        "TotalRevenueAlbumUSA" : 10.89
     },
     {
         "AlbumTitleUSA" : "Prenda Minha",
-        "TotalRevenueUSA" : 10.89
+        "TotalRevenueAlbumUSA" : 10.89
     },
     {
         "AlbumTitleUSA" : "Chill: Brazil (Disc 2)",
-        "TotalRevenueUSA" : 9.90
+        "TotalRevenueAlbumUSA" : 9.90
     },
     {
         "AlbumTitleUSA" : "Back to Black",
-        "TotalRevenueUSA" : 8.91
+        "TotalRevenueAlbumUSA" : 8.91
     }]`
 
 let dataAlbumUSA = JSON.parse(dataJsonAlbumUSA)
