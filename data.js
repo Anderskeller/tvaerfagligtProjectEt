@@ -169,3 +169,27 @@ let data3 = JSON.parse(dataJson3)
 let data2 = JSON.parse(dataJson2)
 
 let data = JSON.parse(dataJson)
+
+let dataJsonAlbumOA = `[
+    {
+        "AlbumTitle" : "Battlestar Galactica (Classic), Season 1",
+        "TotalRevenueAlbum" : 35.82
+    },
+    {
+        "AlbumTitle" : "Minha Historia",
+        "TotalRevenueAlbum" : 34.65
+    },
+    {
+        "AlbumTitle" : "The Office, Season 3",
+        "TotalRevenueAlbum" : 31.84
+    },
+    {
+        "AlbumTitle" : "Heroes, Season 1",
+        "TotalRevenueAlbum" : 25.87
+    },
+    {
+        "AlbumTitle" : "Lost, Season 2",
+        "TotalRevenueAlbum" : 25.87
+    }]`
+
+let dataAlbumOA = JSON.parse(dataJsonAlbumOA)

@@ -19,6 +19,10 @@ let revenueData6 = data6.map(item => item.TotalSales);
 
 /// Definerer det oprindelige dataset til grafen, inklusive labels og data.
 let ctx = document.getElementById('dataChart').getContext('2d');
+
+let labelsAlbum = dataAlbumOA.map(item => item.AlbumTitle);
+let revenueDataAlbum = dataAlbumOA.map(item => item.TotalRevenueAlbum);
+
 let ctx2 = document.getElementById('dataChart2').getContext('2d');
 
 
