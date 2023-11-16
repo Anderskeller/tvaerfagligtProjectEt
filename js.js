@@ -46,7 +46,7 @@ let overAllData = {
     }],
 };
 
-// Opsætning af første graf /// Kasper
+// Opsætning af anden graf /// Kasper
 let overAllData2 = {
     labels: labels,
     datasets: [{
@@ -63,7 +63,7 @@ let overAllData2 = {
     }],
 };
 
-// Opsætning af første graf /// Anders
+// Opsætning af tredje graf /// Anders
 let overAllData3 = {
     labels: labels,
     datasets: [{
