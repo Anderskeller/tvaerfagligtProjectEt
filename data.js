@@ -193,3 +193,99 @@ let dataJsonAlbumOA = `[
     }]`
 
 let dataAlbumOA = JSON.parse(dataJsonAlbumOA)
+
+let dataJsonAlbumUSA = `[
+    {
+        "AlbumTitleUSA" : "The Office, Season 3",
+        "TotalRevenueUSA" : 27.86
+    },
+    {
+        "AlbumTitleUSA" : "Unplugged",
+        "TotalRevenueUSA" : 10.89
+    },
+    {
+        "AlbumTitleUSA" : "Prenda Minha",
+        "TotalRevenueUSA" : 10.89
+    },
+    {
+        "AlbumTitleUSA" : "Chill: Brazil (Disc 2)",
+        "TotalRevenueUSA" : 9.90
+    },
+    {
+        "AlbumTitleUSA" : "Back to Black",
+        "TotalRevenueUSA" : 8.91
+    }]`
+
+let dataAlbumUSA = JSON.parse(dataJsonAlbumUSA)
+
+let dataJsonAlbumCanada = `[
+    {
+        "AlbumTitle" : "Arquivo II",
+        "TotalRevenue" : 8.91
+    },
+    {
+        "AlbumTitle" : "The Best Of R.E.M.: The IRS Years",
+        "TotalRevenue" : 7.92
+    },
+    {
+        "AlbumTitle" : "Vinícius De Moraes - Sem Limite",
+        "TotalRevenue" : 6.93
+    },
+    {
+        "AlbumTitle" : "Living After Midnight",
+        "TotalRevenue" : 5.94
+    },
+    {
+        "AlbumTitle" : "Greatest Hits I",
+        "TotalRevenue" : 5.94
+    }]`
+
+let dataAlbumCanada = JSON.parse(dataJsonAlbumCanada)
+
+let dataJsonAlbumUK = `[
+    {
+        "AlbumTitle" : "Load",
+        "TotalRevenue" : 4.95
+    },
+    {
+        "AlbumTitle" : "No Prayer For The Dying",
+        "TotalRevenue" : 4.95
+    },
+    {
+        "AlbumTitle" : "Lulu Santos - RCA 100 Anos De Música - Álbum 02",
+        "TotalRevenue" : 3.96
+    },
+    {
+        "AlbumTitle" : "American Idiot",
+        "TotalRevenue" : 3.96
+    },
+    {
+        "AlbumTitle" : "Barulhinho Bom",
+        "TotalRevenue" : 3.96
+    }]`
+
+let dataAlbumUK = JSON.parse(dataJsonAlbumUK)
+
+let dataJsonAlbumDK = `[
+    {
+        "AlbumTitle" : "Mezmerize",
+        "TotalRevenue" : 3.96
+    },
+    {
+        "AlbumTitle" : "Chronicle, Vol. 1",
+        "TotalRevenue" : 3.96
+    },
+    {
+        "AlbumTitle" : "Instant Karma: The Amnesty International Campaign to Save Darfur",
+        "TotalRevenue" : 2.97
+    },
+    {
+        "AlbumTitle" : "Speak of the Devil",
+        "TotalRevenue" : 2.97
+    },
+    {
+        "AlbumTitle" : "Chronicle, Vol. 2",
+        "TotalRevenue" : 2.97
+    }]`
+
+let dataAlbumUK = JSON.parse(dataJsonAlbumUK)
