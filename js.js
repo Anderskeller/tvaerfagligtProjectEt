@@ -141,7 +141,7 @@ let myBarChart2 = new Chart(ctx2, {
 });
 
 let myBarChart3 = new Chart(ctx3, {
-    type: 'heatmap',
+    type: 'bar',
     data: overAllData3,
     options: {scales: {
             x: {
