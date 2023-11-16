@@ -19,6 +19,7 @@ let revenueData6 = data6.map(item => item.TotalSales);
 
 /// Definerer det oprindelige dataset til grafen, inklusive labels og data.
 let ctx = document.getElementById('dataChart').getContext('2d');
+let ctx2 = document.getElementById('dataChart2').getContext('2d');
 
 
 // Opsætning af første graf
@@ -35,6 +36,26 @@ let overAllData = {
 };
 
 let myBarChart = new Chart(ctx, {
+    type: 'bar',
+    data: overAllData,
+    options: {
+        plugins: {
+            legend: {
+                labels: {
+                    font: {
+                        family: "Open Sans",
+                        size: "16px",
+                        spacing: "2",
+
+                    }
+                }
+            }
+        }
+    }
+
+});
+
+let myBarChart2 = new Chart(ctx2, {
     type: 'bar',
     data: overAllData,
     options: {
@@ -75,6 +96,7 @@ function resizeChart() {
 
 
 /// Update når man trykker på knapperne
+/// TO DO - Indsæt data til de 2 nye charts
 function updateChartData(dataKey) {
     switch (dataKey) {
         case 'overall':
