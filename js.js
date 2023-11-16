@@ -188,8 +188,8 @@ function resizeChart() {
     let canvas2 = document.getElementById('dataChart2');
     let canvasWrapper2 = document.getElementById('canvasWrapper2');
     /// Anders
-    let canvas3 = document.getElementById('dataChart2');
-    let canvasWrapper3 = document.getElementById('canvasWrapper2');
+    let canvas3 = document.getElementById('dataChart3');
+    let canvasWrapper3 = document.getElementById('canvasWrapper3');
 
     // sætter canvas til at tilpasse wrapper
     /// Victor
@@ -224,6 +224,7 @@ function updateChartData(dataKey) {
         case 'overall':
             /// Anders
             myBarChart.data.datasets[0].data = revenueData;
+            myBarChart.data.labels = labels;
             /// Kasper
             myBarChart2.data.datasets[0].data = revenueDataAlbum;
             break;
