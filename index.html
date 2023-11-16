@@ -1,35 +1,34 @@
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Chart.js Example</title>
-        <link rel="stylesheet" href="style.css">
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    </head>
-    <body>
-
-    <div id="main-content">
-        <img src="./img/background.jpg" alt="Your Image" id="background-img">
-        <div id="btnWrapper" style="">
-            <button id="overallBtn">Overall</button>
-            <button id="usaBtn">USA</button>
-            <button id="denmarkBtn">Denmark</button>
-            <button id="canadaBtn">Canada</button>
-            <button id="ukBtn">United Kingdom</button>
-            <button id="topSellingBtn">Top Selling Countries</button>
-
-        </div>
-
-        <div id="canvasWrapper">
-            <canvas id="dataChart"></canvas>
-        </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chart.js Example</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<div id="main-content">
+    <img src="./img/backgroundtwo.jpeg" alt="Your Image" id="background-img">
+<nav class="sticky-nav">
+    <div id="btnWrapper">
+        <button id="overallBtn">Overall</button>
+        <button id="usaBtn">USA</button>
+        <button id="denmarkBtn">Denmark</button>
+        <button id="canadaBtn">Canada</button>
+        <button id="ukBtn">United Kingdom</button>
+        <button id="topSellingBtn">Top Selling Countries</button>
     </div>
-    <!-- Add this inside the body tag, preferably after the canvasWrapper div -->
-    <div id="totalRevenue">Total Revenue: $0.00 </div>
+</nav>
 
 
+    <div id="canvasWrapper">
+        <canvas id="dataChart"></canvas>
+    </div>
+</div>
 
-    <script src="data.js"> </script>
-    <script src="js.js"></script>
-    </body>
-    </html>
+<div id="totalRevenue">Total Revenue: $0.00 </div>
+
+<script src="data.js"> </script>
+<script src="js.js"></script>
+</body>
+</html>

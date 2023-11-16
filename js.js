@@ -115,6 +115,7 @@ document.getElementById('overallBtn').addEventListener('click', function() {
 
 document.getElementById('usaBtn').addEventListener('click', function() {
     updateChartData('usa');
+
 });
 
 document.getElementById('denmarkBtn').addEventListener('click', function() {
