@@ -50,8 +50,14 @@ let overAllData2 = {
     datasets: [{
         label: 'Dataset 1',
         data: revenueData,
-        backgroundColor: 'rgba(255,102,86,0.89)',
-        borderColor: 'rgb(255,102,86)',
+        backgroundColor: [
+            '#232D3F',
+            '#3C485D',
+            '#546573',
+            '#6D7F8C',
+            '#859AA5',
+            '#9CAFBF',
+        ],
         borderWidth: 1
     }],
 
@@ -89,8 +95,19 @@ let myBarChart = new Chart(ctx, {
 });
 let myBarChart2 = new Chart(ctx2, {
     type: 'bar',
-    data: overAllData,
-    options: {
+    data: overAllData2,
+    options: {scales: {
+            x: {
+                grid: {
+                    display: false // Hide x-axis gridlines
+                }
+            },
+            y: {
+                grid: {
+                    display: false // Hide y-axis gridlines
+                }
+            }
+        },
         plugins: {
             legend: {
                 labels: {
@@ -139,10 +156,13 @@ function updateChartData(dataKey) {
     switch (dataKey) {
         case 'overall':
             myBarChart.data.datasets[0].data = revenueData;
+
+            myBarChart2.data.datasets[0].data = revenueDataAlbum;
             break;
         case 'usa':
             myBarChart.data.labels = labels2;
             myBarChart.data.datasets[0].data = revenueData2;
+
             break;
         case 'denmark':
             myBarChart.data.labels = labels3;
@@ -165,6 +185,7 @@ function updateChartData(dataKey) {
             return;
     }
     myBarChart.update();
+    myBarChart2.update();
 }
 
 
