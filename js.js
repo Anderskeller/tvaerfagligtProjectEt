@@ -68,7 +68,7 @@ let overAllData3 = {
     labels: labels,
     datasets: [{
         label: 'Total revenue',
-        data: revenueData,
+        data: revenueData5,
         backgroundColor: [
             '#232D3F',
             '#3C485D',
@@ -188,8 +188,8 @@ function resizeChart() {
     let canvas2 = document.getElementById('dataChart2');
     let canvasWrapper2 = document.getElementById('canvasWrapper2');
     /// Anders
-    let canvas3 = document.getElementById('dataChart2');
-    let canvasWrapper3 = document.getElementById('canvasWrapper2');
+    let canvas3 = document.getElementById('dataChart3');
+    let canvasWrapper3 = document.getElementById('canvasWrapper3');
 
     // sætter canvas til at tilpasse wrapper
     /// Victor
