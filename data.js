@@ -172,7 +172,7 @@ let data = JSON.parse(dataJson)
 
 let dataJsonAlbumOA = `[
     {
-        "AlbumTitle" : "Battlestar Galactica (Classic), Season 1",
+        "AlbumTitle" : "BG (C), Season 1",
         "TotalRevenueAlbum" : 35.82
     },
     {

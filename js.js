@@ -44,7 +44,7 @@ let overAllData = {
     }],
 };
 
-// Opsætning af første graf
+// Opsætning af anden graf
 let overAllData2 = {
     labels: labels,
     datasets: [{
@@ -156,7 +156,7 @@ function updateChartData(dataKey) {
     switch (dataKey) {
         case 'overall':
             myBarChart.data.datasets[0].data = revenueData;
-
+            myBarChart2.data.labels = labelsAlbum;
             myBarChart2.data.datasets[0].data = revenueDataAlbum;
             break;
         case 'usa':
