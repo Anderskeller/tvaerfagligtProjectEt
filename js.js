@@ -224,6 +224,7 @@ function updateChartData(dataKey) {
         case 'overall':
             /// Anders
             myBarChart.data.datasets[0].data = revenueData;
+            myBarChart.data.labels = labels;
             /// Kasper
             myBarChart2.data.datasets[0].data = revenueDataAlbum;
             break;
