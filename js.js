@@ -69,7 +69,7 @@ let overAllData = {
 let overAllData2 = {
     labels: labels,
     datasets: [{
-        label: 'Total revenue',
+        label: '',
         data: revenueDataAlbum,
         backgroundColor: [
             '#232D3F',
@@ -150,6 +150,7 @@ let myBarChart2 = new Chart(ctx2, {
         },
         plugins: {
             legend: {
+                display: false,
                 labels: {
                     font: {
                         family: "Open Sans",
