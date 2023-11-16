@@ -288,4 +288,4 @@ let dataJsonAlbumDK = `[
         "TotalRevenue" : 2.97
     }]`
 
-let dataAlbumUK = JSON.parse(dataJsonAlbumUK)
+let dataAlbumDK = JSON.parse(dataJsonAlbumDK)
