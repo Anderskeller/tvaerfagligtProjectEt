@@ -1,23 +1,17 @@
 /* Victor */
 
+
 * {
     margin: 0;
     padding: 0;
 
 }
 
-
 #background-img {
     position: fixed;
     z-index: -1;
     height:100%;
     width: 100%;
-}
-
-.sticky-nav {
-    position: sticky;
-    top: 0;
-    background-color: #355367; /* Background color for the sticky nav */
 }
 
 
@@ -59,8 +53,8 @@
      left: 5px;
  }
 
-/* Position canvas wrapper */
-#canvasWrapper {
+/* Grafens/canvas - Wrapper/container */
+#canvasWrapper, #canvasWrapper2  {
     width: 60%;
     padding: 5% 5%;
     background-color: white;
@@ -68,15 +62,6 @@
     position: relative;
     margin-bottom: 100px;
 
-}
-
-#canvasWrapper2 {
-    width: 60%;
-    padding: 5% 5%;
-    background-color: white;
-    margin-left: 15%;
-    position: relative;
-    margin-bottom: 100px;
 }
 
 #canvasWrapper3 {
@@ -94,6 +79,7 @@
 
 }
 
+/* H1's container */
 .explainer {
     background-color: #232D3F;
     padding: 20px;
@@ -102,7 +88,7 @@
     margin-left: 15%;
 }
 
-
+/* H1 */
 .explainertext {
     color: white;
     font-family: "Open Sans", sans-serif;
