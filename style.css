@@ -87,14 +87,6 @@
     position: relative;
 }
 
-#totalRevenue {
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    background-color: #fff;
-    padding: 8px 16px;
-    border-radius: 5px;
-}
 
 #overallBtn, #denmarkBtn, #canadaBtn, #usaBtn, #topSellingBtn, #ukBtn {
     margin-right: 5%;
