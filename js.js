@@ -109,7 +109,7 @@ let overAllData3 = {
     labels: labels,
     datasets: [{
         label: 'Total revenue',
-        data: revenueData,
+        data: revenueDataArtistOverall,
         backgroundColor: [
             '#232D3F',
             '#3C485D',
