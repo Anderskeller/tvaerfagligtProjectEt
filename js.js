@@ -106,7 +106,7 @@ let overAllData2 = {
 
 // Opsætning af start for chart 3 /// Anders
 let overAllData3 = {
-    labels: labels,
+    labels: labelsArtistOverall,
     datasets: [{
         label: 'Total revenue',
         data: revenueDataArtistOverall,
