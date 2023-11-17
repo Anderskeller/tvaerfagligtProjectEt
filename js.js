@@ -38,6 +38,11 @@ let revenueDataAlbumCA = dataAlbumCA.map(item => item.TotalRevenueAlbumCA);
 let labelsAlbumUK = dataAlbumUK.map(item => item.AlbumTitleUK);
 let revenueDataAlbumUK = dataAlbumUK.map(item => item.TotalRevenueAlbumUK);
 
+let labelsAlbumTSC = dataAlbumTSC.map(item => item.CustomerCountryTSC)
+let revenueDataAlbumTSC = dataAlbumTSC.map(item => item.TotalRevenueTSC)
+console.log(labelsAlbumTSC)
+console.log(revenueDataAlbumTSC)
+
 /// Victor
 let ctx = document.getElementById('dataChart').getContext('2d');
 /// Kasper
@@ -65,9 +70,8 @@ let overAllData = {
 
 // Opsætning af start for chart 2 /// Kasper
 let overAllData2 = {
-    labels: labels,
+    labels: labelsAlbum,
     datasets: [{
-        label: '',
         data: revenueDataAlbum,
         backgroundColor: [
             '#232D3F',
@@ -289,6 +293,9 @@ function updateChartData(dataKey) {
             /// Anders
             myBarChart.data.labels = labels6;
             myBarChart.data.datasets[0].data = revenueData6;
+            //Kasper
+            myBarChart2.data.labels = labelsAlbumTSC;
+            myBarChart2.data.datasets[0].data = revenueDataAlbumTSC;
             break;
         default:
             console.error('Invalid data key');
