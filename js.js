@@ -39,7 +39,8 @@ let revenueDataAlbumCA = dataAlbumCA.map(item => item.TotalRevenueAlbumCA);
 let labelsAlbumUK = dataAlbumUK.map(item => item.AlbumTitleUK);
 let revenueDataAlbumUK = dataAlbumUK.map(item => item.TotalRevenueAlbumUK);
 
-
+let labelsAlbumTSC = dataAlbumTSC.map(item => item.CustomerCountryTSC)
+let revenueDataAlbumTSC = dataAlbumTSC.map(item => item.TotalRevenueTSC)
 //***************************
 // This is for chart 3
 
@@ -122,6 +123,7 @@ let overAllData3 = {
     }],
 };
 
+
 /// Victor
 let myBarChart = new Chart(ctx, {
     type: 'bar',
@@ -155,6 +157,8 @@ let myBarChart = new Chart(ctx, {
     }
 
 });
+
+// Her laver man options på sin barchart
 /// Kasper
 let myBarChart2 = new Chart(ctx2, {
     type: 'bar',
@@ -219,7 +223,7 @@ let myBarChart3 = new Chart(ctx3, {
     }
 
 });
-
+// Her bliver der lavet resize function
 // Listener for browser dimensions /// Victor
 window.addEventListener('resize', function() {
     resizeChart();
@@ -328,9 +332,9 @@ function updateChartData(dataKey) {
             myBarChart.data.labels = labels6;
             myBarChart.data.datasets[0].data = revenueData6;
 
-            /// Victor
-            myBarChart2.data.labels = labels6;
-            myBarChart2.data.datasets[0].data = revenueData6;
+            /// Kasper
+            myBarChart2.data.labels = labelsAlbumTSC;
+            myBarChart2.data.datasets[0].data = revenueDataAlbumTSC;
             // Anders
             myBarChart3.data.labels = labelsArtistTop;
             myBarChart3.data.datasets[0].data = revenueDataArtistTop;
