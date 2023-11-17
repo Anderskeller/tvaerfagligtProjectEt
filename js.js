@@ -26,13 +26,11 @@ let revenueDataAlbum = dataAlbumOA.map(item => item.TotalRevenueAlbum);
 
 let labelsAlbumUSA = dataAlbumUSA.map(item => item.AlbumTitleUSA);
 let revenueDataAlbumUSA = dataAlbumUSA.map(item => item.TotalRevenueAlbumUSA);
-console.log(labelsAlbumUSA)
-console.log(revenueDataAlbumUSA)
+
 
 let labelsAlbumDK = dataAlbumDK.map(item => item.AlbumTitleDK);
 let revenueDataAlbumDK = dataAlbumDK.map(item => item.TotalRevenueAlbumDK);
-console.log(labelsAlbumDK)
-console.log(revenueDataAlbumDK)
+
 
 let labelsAlbumCA = dataAlbumCA.map(item => item.AlbumTitleCA);
 let revenueDataAlbumCA = dataAlbumCA.map(item => item.TotalRevenueAlbumCA);
@@ -252,7 +250,6 @@ function updateChartData(dataKey) {
             /// Kasper
             myBarChart2.data.labels = labelsAlbum;
             myBarChart2.data.datasets[0].data = revenueDataAlbum;
-            myBarChart2.data.labels = labels;
             break;
         case 'usa':
             /// Anders
