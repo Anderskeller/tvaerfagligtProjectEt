@@ -107,10 +107,10 @@ let overAllData2 = {
 
 // Opsætning af start for chart 3 /// Anders
 let overAllData3 = {
-    labels: labels,
+    labels: labelsArtistOverall,
     datasets: [{
         label: 'Total revenue',
-        data: revenueData,
+        data: revenueDataArtistOverall,
         backgroundColor: [
             '#232D3F',
             '#3C485D',
