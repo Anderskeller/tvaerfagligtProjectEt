@@ -1,3 +1,5 @@
+// Anders
+// ----- Her er vores Json data, som vi bruger til at lave vores grafer -----
 let dataJson = `[
    {
       "GenreName":"Rock",
@@ -156,8 +158,6 @@ let dataJson6 = `[
 \t}]`
 
 
-
-
 let data6 = JSON.parse(dataJson6)
 
 let data5 = JSON.parse(dataJson5)
@@ -170,6 +170,9 @@ let data2 = JSON.parse(dataJson2)
 
 let data = JSON.parse(dataJson)
 
+
+// Kasper
+// her er vores data til vores anden graf
 let dataJsonAlbumOA = `[
     {
         "AlbumTitle" : "BG (C), Season 1",
@@ -318,6 +321,8 @@ let dataJsonArtistOverall = `[
 	}
 ]`
 
+// her er vores data til vores tredje graf
+// Anders
 let dataArtistOverall = JSON.parse(dataJsonArtistOverall)
 
 let dataJsonArtistUSA = `[

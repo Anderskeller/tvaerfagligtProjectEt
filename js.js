@@ -1,4 +1,5 @@
 // Extract labels and data from the array and create new a array
+
 // This is for chart 1.
 let labels = data.map(item => item.GenreName);
 let revenueData = data.map(item => item.TotalRevenue);
