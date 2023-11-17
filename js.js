@@ -88,7 +88,7 @@ let overAllData = {
 
 // Opsætning af start for chart 2 /// Kasper
 let overAllData2 = {
-    labels: labels,
+    labels: labelsAlbum,
     datasets: [{
         label: '',
         data: revenueDataAlbum,
@@ -327,6 +327,9 @@ function updateChartData(dataKey) {
             myBarChart.data.labels = labels6;
             myBarChart.data.datasets[0].data = revenueData6;
 
+            /// Victor
+            myBarChart2.data.labels = labels6;
+            myBarChart2.data.datasets[0].data = revenueData6;
             // Anders
             myBarChart3.data.labels = labelsArtistTop;
             myBarChart3.data.datasets[0].data = revenueDataArtistTop;
