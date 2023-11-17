@@ -117,6 +117,7 @@ let myBarChart = new Chart(ctx, {
         },
         plugins: {
             legend: {
+                display: false,
                 labels: {
                     font: {
                         family: "Open Sans",
@@ -180,6 +181,7 @@ let myBarChart3 = new Chart(ctx3, {
         },
         plugins: {
             legend: {
+                display: false,
                 labels: {
                     font: {
                         family: "Open Sans",
