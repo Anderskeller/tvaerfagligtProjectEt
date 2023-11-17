@@ -435,3 +435,40 @@ let dataJsonArtistUK = `[
 ]`
 
 let dataArtistUK = JSON.parse(dataJsonArtistUK)
+
+let dataJsonArtistTopCountries = `[
+	{
+		"CustomerCountry" : "USA",
+		"TotalRevenueTop" : 523.06
+	},
+	{
+		"CustomerCountry" : "Canada",
+		"TotalRevenueTop" : 303.96
+	},
+	{
+		"CustomerCountry" : "France",
+		"TotalRevenueTop" : 195.10
+	},
+	{
+		"CustomerCountry" : "Brazil",
+		"TotalRevenueTop" : 190.10
+	},
+	{
+		"CustomerCountry" : "Germany",
+		"TotalRevenueTop" : 156.48
+	},
+	{
+		"CustomerCountry" : "United Kingdom",
+		"TotalRevenueTop" : 112.86
+	},
+	{
+		"CustomerCountry" : "Czech Republic",
+		"TotalRevenueTop" : 90.24
+	},
+	{
+		"CustomerCountry" : "Portugal",
+		"TotalRevenueTop" : 77.24
+	}
+]`
+
+let dataArtistTopCountries = JSON.parse(dataJsonArtistTopCountries)

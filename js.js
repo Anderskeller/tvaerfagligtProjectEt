@@ -42,8 +42,8 @@ let revenueDataAlbumUK = dataAlbumUK.map(item => item.TotalRevenueAlbumUK);
 //***************************
 // This is for chart 3
 
-let labelsArtistOverall = dataArtistOverall.map(item => item.ArtistName);
-let revenueDataArtistOverall = dataArtistOverall.map(item => item.TotalSales);
+let labelsArtistOverall = dataArtistOverall.map(item => item.ArtistNameOverall);
+let revenueDataArtistOverall = dataArtistOverall.map(item => item.TotalSalesOverall);
 
 let labelsArtistUSA = dataArtistUSA.map(item => item.ArtistNameUSA);
 let revenueDataArtistUSA = dataArtistUSA.map(item => item.TotalSalesUSA);
@@ -56,6 +56,9 @@ let revenueDataArtistCanada = dataArtistCanada.map(item => item.TotalSalesCanada
 
 let labelsArtistUK = dataArtistUK.map(item => item.ArtistNameUK);
 let revenueDataArtistUK = dataArtistUK.map(item => item.TotalSalesUK);
+
+let labelsArtistTop = dataArtistTopCountries.map(item => item.CustomerCountry);
+let revenueDataArtistTop = dataArtistTopCountries.map(item => item.TotalRevenueTop);
 
 
 /// Victor
@@ -323,6 +326,10 @@ function updateChartData(dataKey) {
             /// Anders
             myBarChart.data.labels = labels6;
             myBarChart.data.datasets[0].data = revenueData6;
+
+            // Anders
+            myBarChart3.data.labels = labelsArtistTop;
+            myBarChart3.data.datasets[0].data = revenueDataArtistTop;
             break;
         default:
             console.error('Invalid data key');
