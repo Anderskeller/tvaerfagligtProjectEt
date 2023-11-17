@@ -24,11 +24,21 @@ let revenueDataAlbum = dataAlbumOA.map(item => item.TotalRevenueAlbum);
 let labelsAlbumUSA = dataAlbumUSA.map(item => item.AlbumTitleUSA)
 let revenueDataAlbumUSA = dataAlbumUSA.map(item => item.TotalRevenueAlbumUSA);
 
+
+// Top selling artist data /// Anders
+let labelsTopSellingOverall = dataArtistOverall.map(item => item.ArtistName);
+let revenueDataTopSellingOverall = dataArtistOverall.map(item => item.TotalSales);
+
+let labelsTopSellingUSA = dataArtistUSA.map(item => item.ArtistName);
+let revenueDataTopSellingUSA = dataArtistUSA.map(item => item.TotalSales);
+
+
 /// Victor
 let ctx = document.getElementById('dataChart').getContext('2d');
 
 /// Kasper
 let ctx2 = document.getElementById('dataChart2').getContext('2d');
+
 /// Anders
 let ctx3 = document.getElementById('dataChart3').getContext('2d');
 
@@ -175,7 +185,7 @@ let myBarChart3 = new Chart(ctx3, {
                     }
                 }
             }
-        }
+        }, indexAxis: 'y',
     }
 
 });
@@ -237,6 +247,9 @@ function updateChartData(dataKey) {
             myBarChart2.data.labels = labelsAlbum;
             myBarChart2.data.datasets[0].data = revenueDataAlbum;
             myBarChart2.data.labels = labels;
+            /// Anders
+            myBarChart3.data.labels = labelsTopSellingOverall;
+            myBarChart3.data.datasets[0].data = revenueDataTopSellingOverall;
             break;
         case 'usa':
             /// Anders
@@ -245,6 +258,9 @@ function updateChartData(dataKey) {
             /// Kasper
             myBarChart2.data.labels = labelsAlbumUSA;
             myBarChart2.data.datasets[0].data = revenueDataAlbumUSA;
+            /// Anders
+            myBarChart3.data.labels = labelsTopSellingUSA;
+            myBarChart3.data.datasets[0].data = revenueDataTopSellingUSA;
             break;
         case 'denmark':
             /// Anders
