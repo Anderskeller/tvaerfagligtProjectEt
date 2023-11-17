@@ -1,4 +1,5 @@
 // Extract labels and data from the array and create new a array
+// This is for chart 1.
 let labels = data.map(item => item.GenreName);
 let revenueData = data.map(item => item.TotalRevenue);
 
@@ -17,33 +18,35 @@ let revenueData5 = data5.map(item => item.TotalRevenue5);
 let labels6 = data6.map(item => item.Country);
 let revenueData6 = data6.map(item => item.TotalSales);
 
+
+//***************************
+// This is for chart 2
 let labelsAlbum = dataAlbumOA.map(item => item.AlbumTitle);
 let revenueDataAlbum = dataAlbumOA.map(item => item.TotalRevenueAlbum);
 
-// let labelsAlbum
-let labelsAlbumUSA = dataAlbumUSA.map(item => item.AlbumTitleUSA)
+let labelsAlbumUSA = dataAlbumUSA.map(item => item.AlbumTitleUSA);
 let revenueDataAlbumUSA = dataAlbumUSA.map(item => item.TotalRevenueAlbumUSA);
 
 
-// Top selling artist data /// Anders
-let labelsTopSellingOverall = dataArtistOverall.map(item => item.ArtistName);
-let revenueDataTopSellingOverall = dataArtistOverall.map(item => item.TotalSales);
+let labelsAlbumDK = dataAlbumDK.map(item => item.AlbumTitleDK);
+let revenueDataAlbumDK = dataAlbumDK.map(item => item.TotalRevenueAlbumDK);
 
-let labelsTopSellingUSA = dataArtistUSA.map(item => item.ArtistName);
-let revenueDataTopSellingUSA = dataArtistUSA.map(item => item.TotalSales);
 
+let labelsAlbumCA = dataAlbumCA.map(item => item.AlbumTitleCA);
+let revenueDataAlbumCA = dataAlbumCA.map(item => item.TotalRevenueAlbumCA);
+
+let labelsAlbumUK = dataAlbumUK.map(item => item.AlbumTitleUK);
+let revenueDataAlbumUK = dataAlbumUK.map(item => item.TotalRevenueAlbumUK);
 
 /// Victor
 let ctx = document.getElementById('dataChart').getContext('2d');
-
 /// Kasper
 let ctx2 = document.getElementById('dataChart2').getContext('2d');
-
 /// Anders
 let ctx3 = document.getElementById('dataChart3').getContext('2d');
 
 
-// Opsætning af første graf /// Victor
+// Opsætning af start for chart 1 /// Victor
 let overAllData = {
     labels: labels,
     datasets: [{
@@ -60,11 +63,11 @@ let overAllData = {
     }],
 };
 
-// Opsætning af anden graf /// Kasper
+// Opsætning af start for chart 2 /// Kasper
 let overAllData2 = {
     labels: labels,
     datasets: [{
-        label: 'Total revenue',
+        label: '',
         data: revenueDataAlbum,
         backgroundColor: [
             '#232D3F',
@@ -78,7 +81,7 @@ let overAllData2 = {
     }],
 };
 
-// Opsætning af tredje graf /// Anders
+// Opsætning af start for chart 3 /// Anders
 let overAllData3 = {
     labels: labels,
     datasets: [{
@@ -145,6 +148,7 @@ let myBarChart2 = new Chart(ctx2, {
         },
         plugins: {
             legend: {
+                display: false,
                 labels: {
                     font: {
                         family: "Open Sans",
@@ -185,7 +189,7 @@ let myBarChart3 = new Chart(ctx3, {
                     }
                 }
             }
-        }, indexAxis: 'y',
+        }
     }
 
 });
@@ -246,10 +250,6 @@ function updateChartData(dataKey) {
             /// Kasper
             myBarChart2.data.labels = labelsAlbum;
             myBarChart2.data.datasets[0].data = revenueDataAlbum;
-            myBarChart2.data.labels = labels;
-            /// Anders
-            myBarChart3.data.labels = labelsTopSellingOverall;
-            myBarChart3.data.datasets[0].data = revenueDataTopSellingOverall;
             break;
         case 'usa':
             /// Anders
@@ -258,27 +258,30 @@ function updateChartData(dataKey) {
             /// Kasper
             myBarChart2.data.labels = labelsAlbumUSA;
             myBarChart2.data.datasets[0].data = revenueDataAlbumUSA;
-            /// Anders
-            myBarChart3.data.labels = labelsTopSellingUSA;
-            myBarChart3.data.datasets[0].data = revenueDataTopSellingUSA;
             break;
         case 'denmark':
             /// Anders
             myBarChart.data.labels = labels3;
             myBarChart.data.datasets[0].data = revenueData3;
             /// Kasper
+            myBarChart2.data.labels = labelsAlbumDK;
+            myBarChart2.data.datasets[0].data = revenueDataAlbumDK;
             break;
         case 'canada':
             /// Anders
             myBarChart.data.labels = labels4;
             myBarChart.data.datasets[0].data = revenueData4;
             /// Kasper
+            myBarChart2.data.labels = labelsAlbumCA;
+            myBarChart2.data.datasets[0].data = revenueDataAlbumCA;
             break;
         case 'United Kingdom':
             /// Anders
             myBarChart.data.labels = labels5;
             myBarChart.data.datasets[0].data = revenueData5;
             /// Kasper
+            myBarChart2.data.labels = labelsAlbumUK;
+            myBarChart2.data.datasets[0].data = revenueDataAlbumUK;
             break;
         case 'Top Selling Countries':
             /// Anders

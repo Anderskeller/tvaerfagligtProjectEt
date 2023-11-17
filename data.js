@@ -156,11 +156,18 @@ let dataJson6 = `[
 \t}]`
 
 
+
+
 let data6 = JSON.parse(dataJson6)
+
 let data5 = JSON.parse(dataJson5)
+
 let data4 = JSON.parse(dataJson4)
+
 let data3 = JSON.parse(dataJson3)
+
 let data2 = JSON.parse(dataJson2)
+
 let data = JSON.parse(dataJson)
 
 let dataJsonAlbumOA = `[
@@ -185,6 +192,8 @@ let dataJsonAlbumOA = `[
         "TotalRevenueAlbum" : 25.87
     }]`
 
+let dataAlbumOA = JSON.parse(dataJsonAlbumOA)
+
 let dataJsonAlbumUSA = `[
     {
         "AlbumTitleUSA" : "The Office, Season 3",
@@ -207,216 +216,77 @@ let dataJsonAlbumUSA = `[
         "TotalRevenueAlbumUSA" : 8.91
     }]`
 
-let dataJsonAlbumCanada = `[
-    {
-        "AlbumTitle" : "Arquivo II",
-        "TotalRevenue" : 8.91
-    },
-    {
-        "AlbumTitle" : "The Best Of R.E.M.: The IRS Years",
-        "TotalRevenue" : 7.92
-    },
-    {
-        "AlbumTitle" : "Vinícius De Moraes - Sem Limite",
-        "TotalRevenue" : 6.93
-    },
-    {
-        "AlbumTitle" : "Living After Midnight",
-        "TotalRevenue" : 5.94
-    },
-    {
-        "AlbumTitle" : "Greatest Hits I",
-        "TotalRevenue" : 5.94
-    }]`
-
-
-let dataJsonAlbumUK = `[
-    {
-        "AlbumTitle" : "Load",
-        "TotalRevenue" : 4.95
-    },
-    {
-        "AlbumTitle" : "No Prayer For The Dying",
-        "TotalRevenue" : 4.95
-    },
-    {
-        "AlbumTitle" : "Lulu Santos - RCA 100 Anos De Música - Álbum 02",
-        "TotalRevenue" : 3.96
-    },
-    {
-        "AlbumTitle" : "American Idiot",
-        "TotalRevenue" : 3.96
-    },
-    {
-        "AlbumTitle" : "Barulhinho Bom",
-        "TotalRevenue" : 3.96
-    }]`
+let dataAlbumUSA = JSON.parse(dataJsonAlbumUSA)
 
 let dataJsonAlbumDK = `[
     {
-        "AlbumTitle" : "Mezmerize",
-        "TotalRevenue" : 3.96
+        "AlbumTitleDK" : "Mezmerize",
+        "TotalRevenueAlbumDK" : 3.96
     },
     {
-        "AlbumTitle" : "Chronicle, Vol. 1",
-        "TotalRevenue" : 3.96
+        "AlbumTitleDK" : "Chronicle, Vol. 1",
+        "TotalRevenueAlbumDK" : 3.96
     },
     {
-        "AlbumTitle" : "Instant Karma: The Amnesty International Campaign to Save Darfur",
-        "TotalRevenue" : 2.97
+        "AlbumTitleDK" : "Instant Karma: The Amnesty International Campaign to Save Darfur",
+        "TotalRevenueAlbumDK" : 2.97
     },
     {
-        "AlbumTitle" : "Speak of the Devil",
-        "TotalRevenue" : 2.97
+        "AlbumTitleDK" : "Speak of the Devil",
+        "TotalRevenueAlbumDK" : 2.97
     },
     {
-        "AlbumTitle" : "Chronicle, Vol. 2",
-        "TotalRevenue" : 2.97
+        "AlbumTitleDK" : "Chronicle, Vol. 2",
+        "TotalRevenueAlbumDK" : 2.97
     }]`
 
 let dataAlbumDK = JSON.parse(dataJsonAlbumDK)
+
+let dataJsonAlbumCA = `[
+    {
+        "AlbumTitleCA" : "Arquivo II",
+        "TotalRevenueAlbumCA" : 8.91
+    },
+    {
+        "AlbumTitleCA" : "The Best Of R.E.M.: The IRS Years",
+        "TotalRevenueAlbumCA" : 7.92
+    },
+    {
+        "AlbumTitleCA" : "Vinícius De Moraes - Sem Limite",
+        "TotalRevenueAlbumCA" : 6.93
+    },
+    {
+        "AlbumTitleCA" : "Living After Midnight",
+        "TotalRevenueAlbumCA" : 5.94
+    },
+    {
+        "AlbumTitleCA" : "Greatest Hits I",
+        "TotalRevenueAlbumCA" : 5.94
+    }]`
+
+let dataAlbumCA = JSON.parse(dataJsonAlbumCA)
+
+let dataJsonAlbumUK = `[
+    {
+        "AlbumTitleUK" : "Load",
+        "TotalRevenueAlbumUK" : 4.95
+    },
+    {
+        "AlbumTitleUK" : "No Prayer For The Dying",
+        "TotalRevenueAlbumUK" : 4.95
+    },
+    {
+        "AlbumTitleUK" : "Lulu Santos - RCA 100 Anos De Música - Álbum 02",
+        "TotalRevenueAlbumUK" : 3.96
+    },
+    {
+        "AlbumTitleUK" : "American Idiot",
+        "TotalRevenueAlbumUK" : 3.96
+    },
+    {
+        "AlbumTitleUK" : "Barulhinho Bom",
+        "TotalRevenueAlbumUK" : 3.96
+    }]`
+
 let dataAlbumUK = JSON.parse(dataJsonAlbumUK)
-let dataAlbumCanada = JSON.parse(dataJsonAlbumCanada)
-let dataAlbumUSA = JSON.parse(dataJsonAlbumUSA)
-let dataAlbumOA = JSON.parse(dataJsonAlbumOA)
 
-let dataJsonArtistOverall = `[
-	{
-		"ArtistName" : "Os Paralamas Do Sucesso",
-		"TotalSales" : 16
-	},
-	{
-		"ArtistName" : "Metallica",
-		"TotalSales" : 15
-	},
-	{
-		"ArtistName" : "Led Zeppelin",
-		"TotalSales" : 14
-	},
-	{
-		"ArtistName" : "Iron Maiden",
-		"TotalSales" : 9
-	},
-	{
-		"ArtistName" : "R.E.M.",
-		"TotalSales" : 9
-	},
-	{
-		"ArtistName" : "Kiss",
-		"TotalSales" : 9
-	}
-]`
-
-let dataJsonArtistDenmark = `[[
-\t{
-\t\t"ArtistName" : "Creedence Clearwater Revival",
-\t\t"TotalSales" : 7
-\t},
-\t{
-\t\t"ArtistName" : "System Of A Down",
-\t\t"TotalSales" : 4
-\t},
-\t{
-\t\t"ArtistName" : "Red Hot Chili Peppers",
-\t\t"TotalSales" : 4
-\t},
-\t{
-\t\t"ArtistName" : "U2",
-\t\t"TotalSales" : 3
-\t},
-\t{
-\t\t"ArtistName" : "Ozzy Osbourne",
-\t\t"TotalSales" : 3
-\t},
-\t{
-\t\t"ArtistName" : "Smashing Pumpkins",
-\t\t"TotalSales" : 3
-\t}
-]`
-
-let dataJsonArtistCanada = `[
-\t{
-\t\t"ArtistName" : "Os Paralamas Do Sucesso",
-\t\t"TotalSales" : 16
-\t},
-\t{
-\t\t"ArtistName" : "Metallica",
-\t\t"TotalSales" : 15
-\t},
-\t{
-\t\t"ArtistName" : "Led Zeppelin",
-\t\t"TotalSales" : 14
-\t},
-\t{
-\t\t"ArtistName" : "Iron Maiden",
-\t\t"TotalSales" : 9
-\t},
-\t{
-\t\t"ArtistName" : "R.E.M.",
-\t\t"TotalSales" : 9
-\t},
-\t{
-\t\t"ArtistName" : "Kiss",
-\t\t"TotalSales" : 9
-\t}
-]`
-
-let dataJsonArtistUSA = `[
-\t{
-\t\t"ArtistName" : "Iron Maiden",
-\t\t"TotalSales" : 34
-\t},
-\t{
-\t\t"ArtistName" : "Metallica",
-\t\t"TotalSales" : 27
-\t},
-\t{
-\t\t"ArtistName" : "U2",
-\t\t"TotalSales" : 23
-\t},
-\t{
-\t\t"ArtistName" : "The Office",
-\t\t"TotalSales" : 17
-\t},
-\t{
-\t\t"ArtistName" : "Deep Purple",
-\t\t"TotalSales" : 15
-\t},
-\t{
-\t\t"ArtistName" : "Eric Clapton",
-\t\t"TotalSales" : 14
-\t}
-]`
-
-let dataJsonArtistUK = `[
-\t{
-\t\t"ArtistName" : "Metallica",
-\t\t"TotalSales" : 9
-\t},
-\t{
-\t\t"ArtistName" : "Iron Maiden",
-\t\t"TotalSales" : 8
-\t},
-\t{
-\t\t"ArtistName" : "Led Zeppelin",
-\t\t"TotalSales" : 7
-\t},
-\t{
-\t\t"ArtistName" : "Lulu Santos",
-\t\t"TotalSales" : 7
-\t},
-\t{
-\t\t"ArtistName" : "Cidade Negra",
-\t\t"TotalSales" : 5
-\t},
-\t{
-\t\t"ArtistName" : "R.E.M.",
-\t\t"TotalSales" : 5
-\t}
-]`
-
-dataArtistOverall = JSON.parse(dataJsonArtistOverall)
-dataArtistUSA = JSON.parse(dataJsonArtistUSA)
-dataArtistCanada = JSON.parse(dataJsonArtistCanada)
-dataArtistUK = JSON.parse(dataJsonArtistUK)
-dataArtistDenmark = JSON.parse(dataJsonArtistDenmark)
