@@ -290,27 +290,148 @@ let dataJsonAlbumUK = `[
 
 let dataAlbumUK = JSON.parse(dataJsonAlbumUK)
 
-let dataJsonAlbumTSC = `[
-    {
-        "CustomerCountryTSC" : "USA",
-        "TotalRevenueTSC" : 523.06
-    },
-    {
-        "CustomerCountryTSC" : "Canada",
-        "TotalRevenueTSC" : 303.96
-    },
-    {
-        "CustomerCountryTSC" : "France",
-        "TotalRevenueTSC" : 195.10
-    },
-    {
-        "CustomerCountryTSC" : "Brazil",
-        "TotalRevenueTSC" : 190.10
-    },
-    {
-        "CustomerCountryTSC" : "Germany",
-        "TotalRevenueTSC" : 156.48
-    }]`
 
-let dataAlbumTSC = JSON.parse(dataJsonAlbumTSC)
+let dataJsonArtistOverall = `[
+	{
+		"ArtistNameOverall" : "Iron Maiden",
+		"TotalSalesOverall" : 140
+	},
+	{
+		"ArtistNameOverall" : "U2",
+		"TotalSalesOverall" : 107
+	},
+	{
+		"ArtistNameOverall" : "Metallica",
+		"TotalSalesOverall" : 91
+	},
+	{
+		"ArtistNameOverall" : "Led Zeppelin",
+		"TotalSalesOverall" : 87
+	},
+	{
+		"ArtistNameOverall" : "Os Paralamas Do Sucesso",
+		"TotalSalesOverall" : 45
+	},
+	{
+		"ArtistNameOverall" : "Deep Purple",
+		"TotalSalesOverall" : 44
+	}
+]`
 
+let dataArtistOverall = JSON.parse(dataJsonArtistOverall)
+
+let dataJsonArtistUSA = `[
+\t{
+\t\t"ArtistNameUSA" : "Iron Maiden",
+\t\t"TotalSalesUSA" : 34
+\t},
+\t{
+\t\t"ArtistNameUSA" : "Metallica",
+\t\t"TotalSalesUSA" : 27
+\t},
+\t{
+\t\t"ArtistNameUSA" : "U2",
+\t\t"TotalSalesUSA" : 23
+\t},
+\t{
+\t\t"ArtistNameUSA" : "The Office",
+\t\t"TotalSalesUSA" : 17
+\t},
+\t{
+\t\t"ArtistNameUSA" : "Deep Purple",
+\t\t"TotalSalesUSA" : 15
+\t},
+\t{
+\t\t"ArtistNameUSA" : "Eric Clapton",
+\t\t"TotalSalesUSA" : 14
+\t}
+]`
+
+let dataArtistUSA = JSON.parse(dataJsonArtistUSA)
+
+let dataJsonArtistDK = `[
+\t{
+\t\t"ArtistNameDK" : "Creedence Clearwater Revival",
+\t\t"TotalSalesDK" : 7
+\t},
+\t{
+\t\t"ArtistNameDK" : "System Of A Down",
+\t\t"TotalSalesDK" : 4
+\t},
+\t{
+\t\t"ArtistNameDK" : "Red Hot Chili Peppers",
+\t\t"TotalSalesDK" : 4
+\t},
+\t{
+\t\t"ArtistNameDK" : "U2",
+\t\t"TotalSalesDK" : 3
+\t},
+\t{
+\t\t"ArtistNameDK" : "Ozzy Osbourne",
+\t\t"TotalSalesDK" : 3
+\t},
+\t{
+\t\t"ArtistNameDK" : "Smashing Pumpkins",
+\t\t"TotalSalesDK" : 3
+\t}
+]`
+
+let dataArtistDK = JSON.parse(dataJsonArtistDK)
+
+let dataJsonArtistCanada = `[
+\t{
+\t\t"ArtistNameCanada" : "Os Paralamas Do Sucesso",
+\t\t"TotalSalesCanada" : 16
+\t},
+\t{
+\t\t"ArtistNameCanada" : "Metallica",
+\t\t"TotalSalesCanada" : 15
+\t},
+\t{
+\t\t"ArtistNameCanada" : "Led Zeppelin",
+\t\t"TotalSalesCanada" : 14
+\t},
+\t{
+\t\t"ArtistNameCanada" : "Iron Maiden",
+\t\t"TotalSalesCanada" : 9
+\t},
+\t{
+\t\t"ArtistNameCanada" : "R.E.M.",
+\t\t"TotalSalesCanada" : 9
+\t},
+\t{
+\t\t"ArtistNameCanada" : "Kiss",
+\t\t"TotalSalesCanada" : 9
+\t}
+]`
+
+let dataArtistCanada = JSON.parse(dataJsonArtistCanada)
+
+let dataJsonArtistUK = `[
+\t{
+\t\t"ArtistNameUK" : "Metallica",
+\t\t"TotalSalesUK" : 9
+\t},
+\t{
+\t\t"ArtistNameUK" : "Iron Maiden",
+\t\t"TotalSalesUK" : 8
+\t},
+\t{
+\t\t"ArtistNameUK" : "Led Zeppelin",
+\t\t"TotalSalesUK" : 7
+\t},
+\t{
+\t\t"ArtistNameUK" : "Lulu Santos",
+\t\t"TotalSalesUK" : 7
+\t},
+\t{
+\t\t"ArtistNameUK" : "Cidade Negra",
+\t\t"TotalSalesUK" : 5
+\t},
+\t{
+\t\t"ArtistNameUK" : "R.E.M.",
+\t\t"TotalSalesUK" : 5
+\t}
+]`
+
+let dataArtistUK = JSON.parse(dataJsonArtistUK)

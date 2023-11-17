@@ -38,10 +38,25 @@ let revenueDataAlbumCA = dataAlbumCA.map(item => item.TotalRevenueAlbumCA);
 let labelsAlbumUK = dataAlbumUK.map(item => item.AlbumTitleUK);
 let revenueDataAlbumUK = dataAlbumUK.map(item => item.TotalRevenueAlbumUK);
 
-let labelsAlbumTSC = dataAlbumTSC.map(item => item.CustomerCountryTSC)
-let revenueDataAlbumTSC = dataAlbumTSC.map(item => item.TotalRevenueTSC)
-console.log(labelsAlbumTSC)
-console.log(revenueDataAlbumTSC)
+
+//***************************
+// This is for chart 3
+
+let labelsArtistOverall = dataArtistOverall.map(item => item.ArtistName);
+let revenueDataArtistOverall = dataArtistOverall.map(item => item.TotalSales);
+
+let labelsArtistUSA = dataArtistUSA.map(item => item.ArtistNameUSA);
+let revenueDataArtistUSA = dataArtistUSA.map(item => item.TotalSalesUSA);
+
+let labelsArtistDK = dataArtistDK.map(item => item.ArtistNameDK);
+let revenueDataArtistDK = dataArtistDK.map(item => item.TotalSalesDK);
+
+let labelsArtistCanada = dataArtistCanada.map(item => item.ArtistNameCanada);
+let revenueDataArtistCanada = dataArtistCanada.map(item => item.TotalSalesCanada);
+
+let labelsArtistUK = dataArtistUK.map(item => item.ArtistNameUK);
+let revenueDataArtistUK = dataArtistUK.map(item => item.TotalSalesUK);
+
 
 /// Victor
 let ctx = document.getElementById('dataChart').getContext('2d');
@@ -70,8 +85,9 @@ let overAllData = {
 
 // Opsætning af start for chart 2 /// Kasper
 let overAllData2 = {
-    labels: labelsAlbum,
+    labels: labels,
     datasets: [{
+        label: '',
         data: revenueDataAlbum,
         backgroundColor: [
             '#232D3F',
@@ -121,7 +137,6 @@ let myBarChart = new Chart(ctx, {
         },
         plugins: {
             legend: {
-                display: false,
                 labels: {
                     font: {
                         family: "Open Sans",
@@ -185,7 +200,6 @@ let myBarChart3 = new Chart(ctx3, {
         },
         plugins: {
             legend: {
-                display: false,
                 labels: {
                     font: {
                         family: "Open Sans",
@@ -243,7 +257,6 @@ function resizeChart() {
 
 /// Update når man trykker på knapperne
 
-
 /// Victor
 function updateChartData(dataKey) {
     switch (dataKey) {
@@ -256,6 +269,9 @@ function updateChartData(dataKey) {
             /// Kasper
             myBarChart2.data.labels = labelsAlbum;
             myBarChart2.data.datasets[0].data = revenueDataAlbum;
+            // Anders
+            myBarChart3.data.labels = labelsArtistOverall;
+            myBarChart3.data.datasets[0].data = revenueDataArtistOverall;
             break;
         case 'usa':
             /// Anders
@@ -264,6 +280,9 @@ function updateChartData(dataKey) {
             /// Kasper
             myBarChart2.data.labels = labelsAlbumUSA;
             myBarChart2.data.datasets[0].data = revenueDataAlbumUSA;
+            // Anders
+            myBarChart3.data.labels = labelsArtistUSA;
+            myBarChart3.data.datasets[0].data = revenueDataArtistUSA;
             break;
         case 'denmark':
             /// Anders
@@ -272,6 +291,9 @@ function updateChartData(dataKey) {
             /// Kasper
             myBarChart2.data.labels = labelsAlbumDK;
             myBarChart2.data.datasets[0].data = revenueDataAlbumDK;
+            // Anders
+            myBarChart3.data.labels = labelsArtistDK;
+            myBarChart3.data.datasets[0].data = revenueDataArtistDK;
             break;
         case 'canada':
             /// Anders
@@ -280,6 +302,9 @@ function updateChartData(dataKey) {
             /// Kasper
             myBarChart2.data.labels = labelsAlbumCA;
             myBarChart2.data.datasets[0].data = revenueDataAlbumCA;
+            // Anders
+            myBarChart3.data.labels = labelsArtistCanada;
+            myBarChart3.data.datasets[0].data = revenueDataArtistCanada;
             break;
         case 'United Kingdom':
             /// Anders
@@ -288,14 +313,14 @@ function updateChartData(dataKey) {
             /// Kasper
             myBarChart2.data.labels = labelsAlbumUK;
             myBarChart2.data.datasets[0].data = revenueDataAlbumUK;
+            // Anders
+            myBarChart3.data.labels = labelsArtistUK;
+            myBarChart3.data.datasets[0].data = revenueDataArtistUK;
             break;
         case 'Top Selling Countries':
             /// Anders
             myBarChart.data.labels = labels6;
             myBarChart.data.datasets[0].data = revenueData6;
-            //Kasper
-            myBarChart2.data.labels = labelsAlbumTSC;
-            myBarChart2.data.datasets[0].data = revenueDataAlbumTSC;
             break;
         default:
             console.error('Invalid data key');
