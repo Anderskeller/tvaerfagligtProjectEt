@@ -1,6 +1,7 @@
-// Extract labels and data from the array and create new a array
+// Her laver vi en ny array, som vi kan bruge til at lave vores grafer med.
 
 // This is for chart 1.
+Anders
 let labels = data.map(item => item.GenreName);
 let revenueData = data.map(item => item.TotalRevenue);
 
@@ -42,7 +43,7 @@ let revenueDataAlbumUK = dataAlbumUK.map(item => item.TotalRevenueAlbumUK);
 
 //***************************
 // This is for chart 3
-
+// Anders
 let labelsArtistOverall = dataArtistOverall.map(item => item.ArtistNameOverall);
 let revenueDataArtistOverall = dataArtistOverall.map(item => item.TotalSalesOverall);
 
@@ -323,7 +324,7 @@ function updateChartData(dataKey) {
             myBarChart3.data.labels = labelsArtistUK;
             myBarChart3.data.datasets[0].data = revenueDataArtistUK;
             break;
-        case 'Top Selling Countries':
+            case 'Top Selling Countries':
             /// Anders
             myBarChart.data.labels = labels6;
             myBarChart.data.datasets[0].data = revenueData6;
