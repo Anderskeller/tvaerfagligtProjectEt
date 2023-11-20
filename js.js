@@ -1,7 +1,7 @@
 // Her laver vi en ny array, som vi kan bruge til at lave vores grafer med.
 
 // This is for chart 1.
-Anders
+///Anders
 let labels = data.map(item => item.GenreName);
 let revenueData = data.map(item => item.TotalRevenue);
 
