@@ -293,6 +293,29 @@ let dataJsonAlbumUK = `[
 
 let dataAlbumUK = JSON.parse(dataJsonAlbumUK)
 
+let dataJsonAlbumTSC = `[
+    {
+        "CustomerCountryTSC" : "USA",
+        "TotalRevenueTSC" : 523.06
+    },
+    {
+        "CustomerCountryTSC" : "Canada",
+        "TotalRevenueTSC" : 303.96
+    },
+    {
+        "CustomerCountryTSC" : "France",
+        "TotalRevenueTSC" : "195.10"
+    },
+    {
+        "CustomerCountryTSC" : "Brazil",
+        "TotalRevenueTSC" : 190.10
+    },
+    {
+        "CustomerCountryTSC" : "Germany",
+        "TotalRevenueTSC" : 156.48
+    }]`
+
+let dataAlbumTSC = JSON.parse(dataJsonAlbumTSC)
 
 let dataJsonArtistOverall = `[
 	{
